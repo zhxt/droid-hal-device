@@ -206,7 +206,8 @@ check_header_exists system/media/audio/include/system/audio.h && \
         system/media/audio/include/system
 
 extract_headers_to android \
-    system/core/include/android
+    system/core/include/android \
+    bionic/libc/include/android
 
 check_header_exists bionic/libc/kernel/common/linux/sync.h && \
     extract_headers_to linux \
@@ -232,7 +233,8 @@ check_header_exists external/libnfc-nxp/inc/phNfcConfig.h && \
         external/libnfc-nxp/src
 
 extract_headers_to private \
-    system/core/include/private/android_filesystem_config.h
+    system/core/include/private/android_filesystem_config.h \
+    bionic/libc/private
 
 
 # In order to make it easier to trace back the origins of headers, fetch
